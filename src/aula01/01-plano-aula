@@ -1,0 +1,26 @@
+1 - Quebra Gelo
+
+2 - Ambiente
+$JAVA_HOME apontando para o diretório raiz de instalação do JDK;
+Adicionar na $PATH o $JAVA_HOME\bin para reconhecer as ferramentas da JDK.
+
+3 - Hello world! - Compilar, interpretar e executar
+JVM tradicional:
+JVM HOtspot:
+Grall VM:
+
+4 - JShell - para testes rapidos no terminal com (snippets)
+jshell> System.out.println("Hello World");
+Hello World
+- /exit
+- /help into
+
+5-Tipos de dados: conversao implicita e explicita
+inteiros: byte -> short -> int -> long(1L)
+decimais: float(1.2f) -> double -> BigDecimal(mais preciso)
+character: 'a' -> String: "Ada"
+boolean: true ou false
+
+6-
+
+
