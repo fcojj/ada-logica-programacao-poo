@@ -1,4 +1,4 @@
-package aula01;
+package aula1;
 
 public class TipoDados {
 
@@ -17,7 +17,6 @@ public class TipoDados {
         float numDecimalPequeno = 1.33f;
         double NumDecimalGrande = 3.1415926535;
         boolean logico = true; // por padrao false
-
     }
 }
 

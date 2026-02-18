@@ -1,0 +1,16 @@
+Implemente um programa em Java que exibe um menu em loop.
+O programa deve permitir:
+
+Cadastrar um nome em uma lista
+Listar os nomes cadastrados
+Remover um nome pelo índice
+Sair do programa
+*Calcular o tempo em segundos que o programa está rodando e exibir esse tempo
+
+O programa deve tratar exceções, como:
+
+Usuário digitando texto quando deveria digitar número
+Usuário tentando remover índice inválido
+Outras exceções inesperadas
+
+Sempre que ocorrer uma exceção, não pode fechar o programa, apenas mostrar uma mensagem de erro.

@@ -1,4 +1,4 @@
-package aula01;
+package aula1;
 
 public class Operadores {
     void main() {
@@ -45,8 +45,7 @@ public class Operadores {
         int x = 10;
         x += 5; // Mesmo que: x = x + 5 (Resultado: 15)
         x *= 2; // Mesmo que: x = x * 2 (Resultado: 30)
-
+//
         System.out.println("Cálculo Final: " + x);
     }
 }
-

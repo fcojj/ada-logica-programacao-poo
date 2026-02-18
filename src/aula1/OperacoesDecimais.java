@@ -1,4 +1,4 @@
-package aula01;
+package aula1;
 
 import java.math.BigDecimal;
 

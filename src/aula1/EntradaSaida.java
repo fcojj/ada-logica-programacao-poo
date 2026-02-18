@@ -1,6 +1,5 @@
-package aula01;
+package aula1;
 
-import java.math.BigDecimal;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -25,6 +24,5 @@ public class EntradaSaida {
         //numero Pi com 2 casa decimais e com virgula invez de ponto, padrao Br-pt
         String piUs = String.format(en, "%.2f", Math.PI);
         System.out.println("PI no formato brasileiro:" + piUs);
-
     }
 }

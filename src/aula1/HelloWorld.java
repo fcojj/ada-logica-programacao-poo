@@ -1,4 +1,4 @@
-package aula01;
+package aula_01;
 
 public class HelloWorld {
 
