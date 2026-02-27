@@ -1,0 +1,10 @@
+Resumo
+
+1-Classe = descrição de um elemento do mundo (Filme, Ator...)
+2-Objeto = uma instância desse elemento
+3-Encapsulamento = proteger dados, usar get/set
+4-Construtor = como o objeto nasce
+5-Herança = relação “é um tipo de”
+6-Composição = relação "tem um" -> parte essencial -> Sem o pai o filho não existe.
+7-Agregação = relação "contem um" -> parte opcional -> Sem o pai o filho pode existir.
+8-Polimorfismo = métodos iguais, comportamentos diferentes

@@ -1,0 +1,39 @@
+Exercício de Fixação: Sistema de Gestão de Pagamentos (Folha de Caixa)
+Objetivo: Praticar a implementação de contratos via Interfaces, especialização de comportamentos com
+Classes Abstratas, controle de categorias com Enums e a flexibilidade do Polimorfismo
+(incluindo checagem de tipos com instanceof).
+
+Cenário
+Uma instituição financeira precisa de um sistema para processar pagamentos de diferentes perfis de prestadores
+de serviço. O sistema deve ser genérico o suficiente para tratar tanto funcionários internos quanto consultores
+externos.
+
+Requisitos de Implementação:
+
+1-O Contrato (Interface Pagavel):
+Crie uma interface Pagavel que defina os métodos double calcularPagamento() e String emitirComprovante().
+Todos os itens da folha de pagamento devem seguir este contrato.
+
+2-Categorização (Enum Senioridade):
+Crie um Enum para representar os níveis: ESTAGIARIO, JUNIOR, PLENO e SENIOR.
+
+3-Abstração de Funcionários (Class Colaborador):
+Crie uma classe abstrata Colaborador que implemente Pagavel.
+Ela deve conter atributos comuns (nome, salário base) e um método abstrato String obterDescricaoCargo().
+
+4-Especialização (Class BancarioFixo):
+Esta classe herda de Colaborador.
+Regra de Negócio: Se o nível for SENIOR, o pagamento deve ter um bônus de 20% sobre o salário base. Caso contrário, recebe o salário base integral.
+
+5-Serviços Externos (Class ConsultorExterno):
+Esta classe implementa Pagavel diretamente (não é um Colaborador da casa).
+Regra de Negócio: O pagamento é calculado multiplicando o valorHora pelas horasTrabalhadas.
+
+6-Processamento (Class SistemaPagamento):
+No método main, crie uma lista de Pagavel.
+Adicione diferentes objetos à lista.
+Percorra a lista e, para cada item:
+Exiba o valor do pagamento usando polimorfismo.
+
+Desafio instanceof: Se o objeto for um Colaborador, exiba a descrição do cargo.
+Se for um ConsultorExterno, exiba um aviso de "Nota Fiscal de Terceiros".

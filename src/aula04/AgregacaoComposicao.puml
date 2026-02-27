@@ -1,0 +1,44 @@
+@startuml
+title Catálogo de Filmes e Séries - Composição e Agregação
+
+' ===== CLASSES PRINCIPAIS =====
+class Catalogo {
+    - titulos : List<Titulo>
+    + adicionarTitulo(t: Titulo)
+    + listar()
+}
+
+abstract class Titulo {
+    - nome : String
+    - ano : int
+    + getNome()
+    + getAno()
+    + exibir()
+}
+
+class Filme {
+}
+
+class Serie {
+    - temporadas : List<Temporada>
+    + adicionarTemporada(t: Temporada)
+}
+
+class Temporada {
+    - numero : int
+    - episodios : int
+}
+
+' ===== RELACIONAMENTOS =====
+
+' Agregação: Catálogo agrega Títulos (fraco, “tem mas não é dono”)
+Catalogo o-- "0..*" Titulo : agregação
+
+' Herança: Filme e Série são Tipos de Título
+Titulo <|-- Filme
+Titulo <|-- Serie
+
+' Composição: Série é dona das Temporadas (forte, vida dependente)
+Serie *-- "1..*" Temporada : composição
+
+@enduml

@@ -1,0 +1,23 @@
+Projeto: Mini Catálogo de Filmes e Séries
+Um sistema simples que permite:
+
+Menu:
+1-adicionar filmes e séries ao catálogo
+2-listar tudo(exibir detalhes)
+3-buscar por título(opcional)
+4-sair do programa
+
+Esse projeto usa:
+
+Classes: Filme, Serie, Titulo, Temporada, Catalogo
+Herança: Filme e Série herdam de Titulo
+Composição: Serie tem Temporada(s)
+Agregação: Catalogo contém Titulos
+Polimorfismo: exibirDetalhes() funciona diferente em cada tipo
+
+1- Criar classe base Titulo + atributos -> Encapsulamento e construtor
+2- Criar classe Filme que estende Titulo -> Herança
+3- Criar classe Serie que estende Titulo -> Herança + sobrescrita
+4- Criar classe Temporada e integrá‑la à Serie -> Composição
+5- Criar classe Catalogo -> Agregação + listas
+6- Criar o menu Main -> Scanner, repetição, fluxo -> vai criar um Catalogo e usa-lo para armazenar os Titulos

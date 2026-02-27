@@ -1,0 +1,84 @@
+@startuml
+title Mini Catálogo de Filmes e Séries - Classes (apenas extends, sem setas)
+
+skinparam classAttributeIconSize 0
+skinparam backgroundColor #FFFFFF
+skinparam class {
+  BackgroundColor<<abstract>> #FFF7E6
+  BackgroundColor #F3F6FF
+  ArrowColor #2D4059
+}
+skinparam ArrowColor #2D4059
+
+' ===== Classes =====
+abstract class Titulo <<abstract>> {
+  - nome : String
+  - ano : int
+  --
+  + Titulo(nome:String, ano:int)
+  + getNome() : String
+  + getAno() : int
+  + exibirDetalhes() : void  ' polimórfico
+}
+
+class Filme extends Titulo {
+  - duracaoMin : int
+  --
+  + Filme(nome:String, ano:int, duracaoMin:int)
+  + exibirDetalhes() : void
+}
+
+class Serie extends Titulo {
+  - temporadas : List<Temporada>
+  --
+  + Serie(nome:String, ano:int)
+  + adicionarTemporada(t:Temporada) : void
+  + exibirDetalhes() : void
+}
+
+class Temporada {
+  - numero : int
+  - episodios : int
+  --
+  + Temporada(numero:int, episodios:int)
+  + toString() : String
+}
+
+class Catalogo {
+  - titulos : List<Titulo>
+  --
+  + Catalogo()
+  + adicionarTitulo(t:Titulo) : void
+  + listar() : void
+  + buscar(nome:String) : Titulo
+}
+
+class Main {
+  + main(args:String[]) : void
+}
+
+' ===== Relacionamentos NÃO-herança =====
+Serie *-- "1..*" Temporada : composição
+Catalogo o-- "0..*" Titulo : agregação
+Main ..> Catalogo : utiliza
+
+note right of Titulo
+Polimorfismo:
+- exibirDetalhes() é definido em Titulo
+- implementado de forma diferente
+  em Filme e Serie
+end note
+
+note bottom of Serie
+Composição:
+- Temporadas pertencem à Série
+- Sem a Série, as Temporadas não existem
+end note
+
+note bottom of Catalogo
+Agregação:
+- O Catálogo guarda Títulos
+- Se o Catálogo acabar, os Títulos
+  podem continuar existindo
+end note
+@enduml

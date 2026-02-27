@@ -1,0 +1,42 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+interface Pagavel {
+    +calcularPagamento() : double
+    +emitirComprovante() : String
+}
+
+abstract class Colaborador {
+    #nome : String
+    #salarioBase : double
+    {abstract} +obterDescricaoCargo() : String
+}
+
+enum Senioridade {
+    ESTAGIARIO
+    JUNIOR
+    PLENO
+    SENIOR
+}
+
+class BancarioFixo {
+    -senioridade : Senioridade
+    +calcularPagamento() : double
+    +obterDescricaoCargo() : String
+}
+
+class ConsultorExterno {
+    -nome : String
+    -empresa : String
+    -valorHora : double
+    -int horasTrabalhadas
+    +calcularPagamento() : double
+    +emitirComprovante() : String
+}
+
+' Relações
+Pagavel <|.. Colaborador : implementa
+Pagavel <|.. ConsultorExterno : implementa
+Colaborador <|-- BancarioFixo : herda
+BancarioFixo o-- Senioridade : usa
+@enduml
