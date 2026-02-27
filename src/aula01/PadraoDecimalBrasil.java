@@ -1,4 +1,4 @@
-package aula1;
+package aula01;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

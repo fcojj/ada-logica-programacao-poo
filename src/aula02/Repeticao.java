@@ -1,4 +1,4 @@
-package aula2;
+package aula02;
 
 import java.util.Arrays;
 import java.util.List;
